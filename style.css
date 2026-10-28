@@ -1,13 +1,21 @@
 body {
-  color: brown;
-  font-size: 25px;
+  font-family: sans-serif;
+  color: #333333;
+}
+header nav ul li a {
+  color: navy;
 }
 
-p {
-  color: steelblue;
+aside ul li a {
+  color: green;
 }
 
-.color {
-  color: blueviolet;
-  font-size: 12px;
+footer ul li a {
+  color: gray;
+}
+.btn-comprar {
+  color: blue;
+}
+.btn-destacado {
+  color: red;
 }
