@@ -1,18 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: sans-serif;
   color: #333333;
 }
-header nav ul li a {
+header {
   color: navy;
+  background-color: cadetblue;
+  background-image: url("recursos.avif");
+  background-size: cover;
+  background-position: center;
 }
 
-aside ul li a {
+main {
   color: green;
+  background-color: lightcyan;
 }
 
-footer ul li a {
-  color: gray;
+aside {
+  background-color: powderblue;
 }
+footer {
+  color: gray;
+  background-color: beige;
+}
+
+article {
+  padding: 20px 20px 20px 20px;
+  margin: 15px 15px 15px 15px;
+}
+
 .btn-comprar {
   color: blue;
 }
