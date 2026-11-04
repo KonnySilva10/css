@@ -30,3 +30,35 @@ dentro del ancho, y la caja mantiene el tamaño que definí.
 ### 3. Efecto del margen en elementos hermanos
 
 Al aplicar un margen grande a un elemento, este empuja a sus hermanos y los aleja, porque el margen crea una zona libre alrededor de la caja. Los demas se desplazan para respetar esa distancia.
+
+## Hallazgos: Centralización de Identidad Visual y Espaciado
+
+### :root
+
+Se definieron variables CSS en el selector `:root` para centralizar:
+
+- **Colores:** `--color-primario`, `--color-secundario`, `--color-fondo`, `--color-texto`
+- **Tipografía:** `--fuente-principal`la cual use roboto
+- **Espaciados:** `--espacio-s` (8px), `--espacio-m` (16px), `--espacio-l` (24px)
+
+### Tipografía
+
+Se importó la fuente Roboto desde Google Fonts mediante `<link>` en el `<head>`
+del HTML, antes de la hoja de estilos, y se aplicó con `var(--fuente-principal)`.
+
+### Uso de var() en padding y margin
+
+Los valores de `padding` y `margin` de los elementos `header`, `main`, `article`,
+`aside` y `footer` se reemplazaron por `var(--espaciado-pequeño)`, `var(--espaciado-medio)` y
+`var(--espaciado-grande)`.
+
+### Ventajas encontradas
+
+- **Mantenimiento:** cambiar un color o espaciado se hace en un solo lugar y se refleja en toda la página.
+- **Consistencia:** todos los elementos usan los mismos valores.
+- **Legibilidad:** nombres como `--color-primario` explican el propósito del valor.
+- **Escalabilidad:** permite crear nuevos temas redefiniendo solo las variables.
+
+Antes de usar variables, un cambio de identidad visual exigía buscar y editar
+cada valor repetido. Con `:root` y `var()`, el cambio es inmediato y con menos
+riesgo de errores.

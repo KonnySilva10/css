@@ -1,40 +1,65 @@
+:root {
+  --color-primario: moccasin;
+  --color-secundario: rgb(222, 225, 247);
+  --color-fondo: rgb(222, 240, 243);
+  --color-texto: maroon;
+
+  --fuente-principal: "Roboto", sans-serif;
+
+  --espaciado-pequeño: 8px;
+  --espaciado-medio: 16px;
+  --espaciado-grande: 24px;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: sans-serif;
-  color: #333333;
+  font-family: var(--fuente-principal);
+  color: var(--color-texto);
 }
 header {
-  color: navy;
-  background-color: cadetblue;
+  color: var(--color-texto);
+  background-color: var(--color-primario);
   background-image: url("recursos.avif");
   background-size: cover;
   background-position: center;
 }
 
 main {
-  color: green;
-  background-color: lightcyan;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  font-family: var(--fuente-principal);
 }
 
 aside {
-  background-color: powderblue;
+  background-color: var(--color-secundario);
+}
+
+aside h2 {
+  color: var(--color-texto);
 }
 footer {
-  color: gray;
-  background-color: beige;
+  color: var(--color-texto);
+  background-color: var(--color-primario);
 }
 
 article {
-  padding: 20px 20px 20px 20px;
-  margin: 15px 15px 15px 15px;
+  padding: var(--espaciado-medio);
+  margin: var(--espaciado-grande);
 }
 
+article h2 {
+  color: var(--color-primario);
+}
 .btn-comprar {
-  color: blue;
+  color: var(--color-texto);
 }
 .btn-destacado {
-  color: red;
+  color: black;
+}
+
+nav a {
+  color: var(--color-primario);
 }
