@@ -1,7 +1,7 @@
 :root {
-  --color-primario: moccasin;
-  --color-secundario: rgb(222, 225, 247);
-  --color-fondo: rgb(222, 240, 243);
+  --color-primario: #c9b79e;
+  --color-secundario: #4e5d52;
+  --color-fondo: #f6f0e6;
   --color-texto: maroon;
 
   --fuente-principal: "Roboto", sans-serif;
@@ -18,31 +18,38 @@
 body {
   font-family: var(--fuente-principal);
   color: var(--color-texto);
+  margin: 0;
 }
-header {
+
+a {
   color: var(--color-texto);
+}
+
+header {
   background-color: var(--color-primario);
   background-image: url("recursos.avif");
   background-size: cover;
   background-position: center;
+  padding: var(--espaciado-medio);
 }
 
-main {
-  color: var(--color-texto);
-  background-color: var(--color-fondo);
-  font-family: var(--fuente-principal);
+nav a {
+  font-weight: bold;
 }
 
 aside {
-  background-color: var(--color-secundario);
+  background-color: var(--color-primario);
+  padding: var(--espaciado-medio);
 }
 
-aside h2 {
-  color: var(--color-texto);
+main {
+  background-color: var(--color-fondo);
+  padding: var(--espaciado-medio);
 }
+
 footer {
-  color: var(--color-texto);
-  background-color: var(--color-primario);
+  background-color: var(--color-secundario);
+  padding: var(--espaciado-medio);
 }
 
 article {
@@ -50,16 +57,48 @@ article {
   margin: var(--espaciado-grande);
 }
 
-article h2 {
-  color: var(--color-primario);
+article h3 {
+  margin-top: 0;
 }
+
 .btn-comprar {
   color: var(--color-texto);
+  padding: var(--espaciado-pequeño);
 }
+
 .btn-destacado {
   color: black;
 }
 
-nav a {
+aside a {
+  transition: background-color 0.1. color 0.4s;
+}
+
+aside a:hover {
+  background-color: var(--color-texto);
   color: var(--color-primario);
+}
+
+aside a::before {
+  content: "✔ ";
+}
+
+aside a:focus {
+  outline: 3px solid var(--color-secundario);
+}
+
+.btn-comprar:hover {
+  background-color: var(--color-primario);
+}
+
+.btn-comprar:active {
+  position: relative;
+  top: 2px;
+}
+
+article::after {
+  content: "¡Oferta!";
+  background-color: var(--color-texto);
+  color: var(--color-primario);
+  padding: var(--espaciado-pequeño);
 }

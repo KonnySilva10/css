@@ -62,3 +62,23 @@ Los valores de `padding` y `margin` de los elementos `header`, `main`, `article`
 Antes de usar variables, un cambio de identidad visual exigía buscar y editar
 cada valor repetido. Con `:root` y `var()`, el cambio es inmediato y con menos
 riesgo de errores.
+
+
+## Hallazgos: Pseudoclases y Pseudoelementos
+
+### 1. Diferencia entre pseudoclase y pseudoelemento
+Una pseudoclase (como :hover, :focus o :active) hace que un elemento cambie
+de estilo según lo que hace el usuario, por ejemplo cuando pasa el cursor o
+hace clic. Un pseudoelemento (como ::before o ::after) no reacciona a nada,
+sino que agrega contenido decorativo antes o después de un elemento desde el CSS.
+
+### 2. Importancia de :focus para la accesibilidad
+Hay personas que no usan mouse y navegan con la tecla Tab. La pseudoclase
+:focus muestra un contorno en el enlace donde está el teclado, así saben
+en qué parte de la página están. Sin ella, esos usuarios se perderían.
+
+### 3. Por qué usar ::before y ::after para lo decorativo
+Los adornos, como la insignia de oferta o el punto del menú, no son contenido
+real de la página. Si los pongo desde el CSS, el HTML queda limpio y
+semántico, sin etiquetas vacías que solo sirven de decoración, y es más
+fácil cambiarlos o quitarlos desde un solo lugar.
