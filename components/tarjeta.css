@@ -1,13 +1,13 @@
-article {
+.card {
   padding: var(--espaciado-medio);
   margin: var(--espaciado-grande);
 }
 
-article h3 {
+.card__title {
   margin-top: 0;
 }
 
-article::after {
+.card::after {
   content: "¡Oferta!";
   background-color: var(--color-texto);
   color: var(--color-primario);

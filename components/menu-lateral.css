@@ -1,20 +1,20 @@
-aside {
+.menu-lateral {
   background-color: var(--color-primario);
   padding: var(--espaciado-medio);
 }
-aside a {
+.menu-lateral {
   transition: background-color 01 color 0.4s;
 }
 
-aside a:hover {
+.menu-lateral:hover {
   background-color: var(--color-texto);
   color: var(--color-primario);
 }
 
-aside a::before {
+.menu-lateral::before {
   content: "✔ ";
 }
 
-aside a:focus {
+.menu-lateral:focus {
   outline: 3px solid var(--color-secundario);
 }
