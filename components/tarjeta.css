@@ -1,0 +1,15 @@
+article {
+  padding: var(--espaciado-medio);
+  margin: var(--espaciado-grande);
+}
+
+article h3 {
+  margin-top: 0;
+}
+
+article::after {
+  content: "¡Oferta!";
+  background-color: var(--color-texto);
+  color: var(--color-primario);
+  padding: var(--espaciado-pequeño);
+}

@@ -1,3 +1,7 @@
+@import url(components/botones.css);
+@import url(components/menu-lateral.css);
+@import url(components/tarjeta.css);
+
 :root {
   --color-primario: #c9b79e;
   --color-secundario: #4e5d52;
@@ -37,11 +41,6 @@ nav a {
   font-weight: bold;
 }
 
-aside {
-  background-color: var(--color-primario);
-  padding: var(--espaciado-medio);
-}
-
 main {
   background-color: var(--color-fondo);
   padding: var(--espaciado-medio);
@@ -50,55 +49,4 @@ main {
 footer {
   background-color: var(--color-secundario);
   padding: var(--espaciado-medio);
-}
-
-article {
-  padding: var(--espaciado-medio);
-  margin: var(--espaciado-grande);
-}
-
-article h3 {
-  margin-top: 0;
-}
-
-.btn-comprar {
-  color: var(--color-texto);
-  padding: var(--espaciado-pequeño);
-}
-
-.btn-destacado {
-  color: black;
-}
-
-aside a {
-  transition: background-color 0.1. color 0.4s;
-}
-
-aside a:hover {
-  background-color: var(--color-texto);
-  color: var(--color-primario);
-}
-
-aside a::before {
-  content: "✔ ";
-}
-
-aside a:focus {
-  outline: 3px solid var(--color-secundario);
-}
-
-.btn-comprar:hover {
-  background-color: var(--color-primario);
-}
-
-.btn-comprar:active {
-  position: relative;
-  top: 2px;
-}
-
-article::after {
-  content: "¡Oferta!";
-  background-color: var(--color-texto);
-  color: var(--color-primario);
-  padding: var(--espaciado-pequeño);
 }

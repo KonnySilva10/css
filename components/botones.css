@@ -1,0 +1,16 @@
+.btn-comprar {
+  color: var(--color-texto);
+  padding: var(--espaciado-pequeño);
+}
+
+.btn-destacado {
+  color: black;
+}
+.btn-comprar:hover {
+  background-color: var(--color-primario);
+}
+
+.btn-comprar:active {
+  position: relative;
+  top: 2px;
+}
