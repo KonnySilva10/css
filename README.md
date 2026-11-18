@@ -120,4 +120,4 @@ Esto ayuda al trabajo en equipo porque:
 
 ### 3. ¿Cómo evita BEM la guerra de especificidad (Cascada)?
 
-En CSS, cuando dos reglas apuntan al mismo elemento, gana la que tiene más especificidad. Con selectores anidados como `.producto h2` (una clase más una etiqueta) la especificidad sube, y para sobrescribir esa regla después hay que escribir
+En CSS, cuando dos reglas apuntan al mismo elemento, gana la que tiene más especificidad. Con selectores anidados como `.producto h2` (una clase más una etiqueta) la especificidad sube, y para sobrescribir esa regla después hay que escribir.
