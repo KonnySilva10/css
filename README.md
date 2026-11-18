@@ -63,22 +63,61 @@ Antes de usar variables, un cambio de identidad visual exigía buscar y editar
 cada valor repetido. Con `:root` y `var()`, el cambio es inmediato y con menos
 riesgo de errores.
 
-
 ## Hallazgos: Pseudoclases y Pseudoelementos
 
 ### 1. Diferencia entre pseudoclase y pseudoelemento
+
 Una pseudoclase (como :hover, :focus o :active) hace que un elemento cambie
 de estilo según lo que hace el usuario, por ejemplo cuando pasa el cursor o
 hace clic. Un pseudoelemento (como ::before o ::after) no reacciona a nada,
 sino que agrega contenido decorativo antes o después de un elemento desde el CSS.
 
 ### 2. Importancia de :focus para la accesibilidad
+
 Hay personas que no usan mouse y navegan con la tecla Tab. La pseudoclase
 :focus muestra un contorno en el enlace donde está el teclado, así saben
 en qué parte de la página están. Sin ella, esos usuarios se perderían.
 
 ### 3. Por qué usar ::before y ::after para lo decorativo
+
 Los adornos, como la insignia de oferta o el punto del menú, no son contenido
 real de la página. Si los pongo desde el CSS, el HTML queda limpio y
 semántico, sin etiquetas vacías que solo sirven de decoración, y es más
 fácil cambiarlos o quitarlos desde un solo lugar.
+
+## Hallazgos: Arquitectura BEM y Modularidad
+
+### 1. ¿Qué significa BEM y cómo se escribe?
+
+BEM significa **Bloque, Elemento, Modificador** (en inglés _Block, Element, Modifier_). Es una forma de nombrar las clases de CSS para que el nombre ya diga qué es cada cosa y a qué pertenece.
+
+- **Bloque:** el componente completo e independiente. Ejemplo: `.card`.
+- **Elemento:** una parte que solo tiene sentido dentro de su bloque. Se escribe con doble guion bajo `__`. Ejemplo: `.card__title`, `.card__price`.
+- **Modificador:** una variación del bloque o del elemento. Se escribe con doble guion medio `--`. Ejemplo: `.card--destacada`, `.btn--secundario`.
+
+Visualmente se escribe así: `bloque__elemento--modificador`.
+
+En mi catálogo lo apliqué así:
+
+```html
+<article class="card card--destacada">
+  <h3 class="card__title">Producto 1 - pantalon liso</h3>
+  <p class="card__price">Precio: $40.000</p>
+  <a href="#" class="btn btn--destacado">Comprar</a>
+</article>
+```
+
+### 2. ¿Por qué dividir el CSS en varios archivos facilita el trabajo colaborativo?
+
+Antes tenía todo mezclado en un solo `style.css`. Ahora separé los componentes en `css/tarjeta.css`, `css/botones.css` y `css/menu-lateral.css`, y los conecté con `@import`.
+
+Esto ayuda al trabajo en equipo porque:
+
+- Cada persona puede trabajar en un componente distinto (uno en las tarjetas, otro en los botones) sin editar el mismo archivo al mismo tiempo.
+- Se reducen los conflictos al hacer `merge` en Git, porque los cambios quedan en archivos diferentes.
+- Es más fácil encontrar algo: si hay un problema con un botón, se abre `botones.css` y no hay que buscar entre cientos de líneas.
+- Un componente se puede reutilizar o modificar sin afectar a los demás.
+
+### 3. ¿Cómo evita BEM la guerra de especificidad (Cascada)?
+
+En CSS, cuando dos reglas apuntan al mismo elemento, gana la que tiene más especificidad. Con selectores anidados como `.producto h2` (una clase más una etiqueta) la especificidad sube, y para sobrescribir esa regla después hay que escribir
