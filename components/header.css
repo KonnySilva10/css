@@ -1,0 +1,7 @@
+.header {
+  background-color: var(--color-primario);
+  background-image: url("../recursos.avif");
+  background-size: cover;
+  background-position: center;
+  padding: var(--espaciado-medio);
+}

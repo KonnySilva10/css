@@ -2,16 +2,16 @@
   background-color: var(--color-primario);
   padding: var(--espaciado-medio);
 }
-.menu-lateral {
-  transition: background-color 01 color 0.4s;
+.menu-lateral li {
+  transition: background-color 0.1s, color 0.4s;
 }
 
-.menu-lateral:hover {
-  background-color: var(--color-texto);
+.menu-lateral li:hover {
+  background-color: var(--color-secundario);
   color: var(--color-primario);
 }
 
-.menu-lateral::before {
+.menu-lateral li:first-child::before {
   content: "✔ ";
 }
 

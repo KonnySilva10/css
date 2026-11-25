@@ -1,16 +1,20 @@
-.btn--destacada {
+.btn-comprar {
+
+}
+
+.btn-comprar--destacada {
   color: var(--color-texto);
   padding: var(--espaciado-pequeño);
 }
 
-.btn--secundario {
+.btn-comprar--secundario {
   color: black;
 }
-.btn--destacada:hover {
+.btn-comprar--destacada:hover {
   background-color: var(--color-primario);
 }
 
-.btn--destacada:active {
+.btn-comprar--destacada:active {
   position: relative;
   top: 2px;
 }

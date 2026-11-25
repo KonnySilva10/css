@@ -7,7 +7,7 @@
   margin-top: 0;
 }
 
-.card::after {
+.card--destacada::after {
   content: "¡Oferta!";
   background-color: var(--color-texto);
   color: var(--color-primario);

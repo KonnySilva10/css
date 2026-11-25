@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catalogo de productos</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,16 +15,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1 class="card__price">Mi catálogo - Tienda Online</h1>
-      <nav>
-        <ul>
+
+    <div class="app-layout">
+
+    <header class="header">
+      <h1 class="header__title">Mi catálogo - Tienda Online</h1>
+
+      <nav class="nav">
+        <ul class="nav__list">
           <li><a href="#">Inicio</a></li>
           <li><a href="#">Productos</a></li>
           <li><a href="#">Contacto</a></li>
         </ul>
       </nav>
     </header>
+
+    <div class="main-wrapper">
 
     <aside class="menu-lateral">
       <h2 class="card__title">Categorías</h2>
@@ -35,46 +42,52 @@
     </aside>
 
     <main>
-      <section>
+      <section class="product-list">
         <h2>Productos</h2>
 
         <article class="card card--destacada">
-          <h3 class="card__title">Producto 1 - pantalon liso</h3>
-          <p class="card__description">tela suave y comoda.</p>
+          <h3 class="card__title">Producto 1 - Pantalon liso</h3>
+          <p class="card__description">Tela suave y comoda.</p>
           <p class="card__price">Precio: $40.000</p>
-          <a href="#" class="btn-comprar btn--destacada">Comprar</a>
+          <a href="#" class="card__button btn-comprar btn-comprar--destacada">Comprar</a>
         </article>
 
         <article class="card card--destacada">
-          <h3 class="card__title">Producto 2 - camisa casual</h3>
-          <p class="card__description">tela de algodón y diseño moderno.</p>
+          <h3 class="card__title">Producto 2 - Camisa casual</h3>
+          <p class="card__description">Tela de algodón y diseño moderno.</p>
           <p class="card__price">Precio: $75.000</p>
-          <a href="#" class="btn-comprar btn--destacada">Comprar</a>
+          <a href="#" class="card__button btn-comprar btn-comprar--destacada">Comprar</a>
         </article>
 
         <article class="card">
-          <h3 class="card__title">Producto 3 - zapatos de deporte</h3>
-          <p class="card__description">comodidad y estilo unico.</p>
+          <h3 class="card__title">Producto 3 - Zapatos de deporte</h3>
+          <p class="card__description">Comodidad y estilo unico.</p>
           <p class="card__price">Precio: $150.000</p>
-          <a href="#" class="btn-comprar">Comprar</a>
+          <a href="#" class="card__button btn-comprar btn-comprar--destacada ">Comprar</a>
         </article>
 
         <article class="card">
-          <h2 class="card__title">Producto 4 - gorra</h2>
-          <p class="card__description">tela de algodón y diseño moderno.</p>
+          <h2 class="card__title">Producto 4 - Gorra</h2>
+          <p class="card__description">Tela de algodón y diseño moderno.</p>
           <p class="card__price">Precio: $130.000</p>
-          <a href="#" class="btn-comprar btn--secundario">Comprar</a>
+          <a href="#" class="card__button btn-comprar btn-comprar--secundario">Comprar</a>
         </article>
+
       </section>
     </main>
 
-    <footer>
+    </div>
+
+    <footer class="footer">
       <p>&copy; 2026 Mi Catálogo. Todos los derechos reservados.</p>
-      <ul>
+      <ul class="footer__list">
         <li><a href="#">Facebook</a></li>
         <li><a href="#">Instagram</a></li>
         <li><a href="#">X</a></li>
       </ul>
     </footer>
+
+   </div>
+
   </body>
 </html>

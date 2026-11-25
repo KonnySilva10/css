@@ -1,0 +1,4 @@
+.footer {
+  background-color: var(--color-secundario);
+  padding: var(--espaciado-medio);
+}
