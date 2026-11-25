@@ -14,6 +14,8 @@ En el ejercicio le puse al botón del primer producto una clase y un ID, cada un
 
 Para arreglarlo quité las reglas con ID y usé solo clases (`.btn-comprar` y `.btn-destacado`). Como ahora las dos valen 10 puntos, gana la que está más abajo en el archivo, y así no tuve que usar `!important`.
 
+
+
 ## Hallazgos: El Modelo de Caja
 
 La diferencia entre margin y padding:
@@ -30,6 +32,8 @@ dentro del ancho, y la caja mantiene el tamaño que definí.
 ### 3. Efecto del margen en elementos hermanos
 
 Al aplicar un margen grande a un elemento, este empuja a sus hermanos y los aleja, porque el margen crea una zona libre alrededor de la caja. Los demas se desplazan para respetar esa distancia.
+
+
 
 ## Hallazgos: Centralización de Identidad Visual y Espaciado
 
@@ -63,6 +67,8 @@ Antes de usar variables, un cambio de identidad visual exigía buscar y editar
 cada valor repetido. Con `:root` y `var()`, el cambio es inmediato y con menos
 riesgo de errores.
 
+
+
 ## Hallazgos: Pseudoclases y Pseudoelementos
 
 ### 1. Diferencia entre pseudoclase y pseudoelemento
@@ -84,6 +90,8 @@ Los adornos, como la insignia de oferta o el punto del menú, no son contenido
 real de la página. Si los pongo desde el CSS, el HTML queda limpio y
 semántico, sin etiquetas vacías que solo sirven de decoración, y es más
 fácil cambiarlos o quitarlos desde un solo lugar.
+
+
 
 ## Hallazgos: Arquitectura BEM y Modularidad
 
@@ -121,3 +129,21 @@ Esto ayuda al trabajo en equipo porque:
 ### 3. ¿Cómo evita BEM la guerra de especificidad (Cascada)?
 
 En CSS, cuando dos reglas apuntan al mismo elemento, gana la que tiene más especificidad. Con selectores anidados como `.producto h2` (una clase más una etiqueta) la especificidad sube, y para sobrescribir esa regla después hay que escribir.
+
+
+
+
+
+## Hallazgos: Arquitectura Total con Flexbox
+
+### 1. Control del pie de página
+
+Utilicé `min-height: 100vh` para que la página ocupara como mínimo toda la altura de la pantalla. También usé `flex-direction: column` para organizar el encabezado, el contenido y el pie de página uno debajo del otro. Esto ayudó a que el footer quedara al final de la página.
+
+### 2. Uso de gap en la navegación
+
+Utilicé `gap` para separar los elementos de los menús de navegación. Así pude dejar un espacio entre los enlaces sin tener que colocar márgenes a cada uno.
+
+### 3. Organización de las tarjetas con Flexbox
+
+Con BEM pude organizar mejor las clases de las tarjetas, con las Custom Properties reutilicé los colores y espacios que ya tenía definidos, y con Flexbox organicé los elementos de cada producto. También utilicé `flex-grow: 1` para que las descripciones ocuparan el espacio disponible y los botones quedaran mejor alineados, aunque los textos fueran de diferentes tamaños.

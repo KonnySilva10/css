@@ -1,6 +1,19 @@
 .card {
   padding: var(--espaciado-medio);
   margin: var(--espaciado-grande);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card__description {
+  flex-grow: 1;
+}
+
+.card__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .card__title {

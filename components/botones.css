@@ -7,8 +7,10 @@
   padding: var(--espaciado-pequeño);
 }
 
-.btn-comprar--secundario {
+.btn-comprar--secundario:hover {
+  background-color: var(--color-primario);
   color: black;
+  padding: var(--espaciado-pequeño);
 }
 .btn-comprar--destacada:hover {
   background-color: var(--color-primario);

@@ -3,6 +3,7 @@
 @import url(components/tarjeta.css);
 @import url(components/header.css);
 @import url(components/footer.css);
+@import url(components/nav.css);
 
 :root {
   --color-primario: #c9b79e;
@@ -40,6 +41,17 @@ nav a {
 main {
   background-color: var(--color-fondo);
   padding: var(--espaciado-medio);
+  flex: 1;
 }
 
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-wrapper {
+  display: flex;
+  flex: 1;
+}
 

@@ -1,6 +1,10 @@
 .menu-lateral {
   background-color: var(--color-primario);
   padding: var(--espaciado-medio);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaciado-grande);
 }
 .menu-lateral li {
   transition: background-color 0.1s, color 0.4s;
